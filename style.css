@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #f3f3f3;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #008C76;
+    margin-right: 30px;
+}
+
+nav .nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav .nav-links li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: #008C76;
+}
+
+/* Green background section with image */
+.green-section {
+    background: linear-gradient(to right, rgba(0, 111, 82, 0.7), rgba(0, 140, 118, 0.7)),  
+                url('lotion1.png'); /* Add your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 30px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+    background-blend-mode: overlay;
+}
+
+.green-text-container {
+    display: flex;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+    z-index: 2;
+}
+
+.green-text-container p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.main-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+/* Product Section */
+.product-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.product-image {
+    width: 600px !important; /* Adjust the width as needed */
+    height: auto !important;
+    margin-bottom: 20px;
+}
+
+.product-description {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.buy-now {
+    background-color: #008C76;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buy-now:hover {
+    background-color: #006f52;
+}
+
+/* About Us Section */
+.about-us {
+    background-color: #f3f3f3;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.about-us p {
+    font-size: 1.2rem;
+}
+
+/* Before & After Section */
+.before-after {
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+    padding: 40px 20px;
+    background-color: #e6e6e6;
+}
+
+.before-box, .after-box {
+    text-align: center;
+}
+
+.before-box h3, .after-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.before-image, .after-image {
+    width: 800px !important; /* Adjust the width as needed */
+    height: auto !important;
+    margin-top: 10px;
+}
+.products-page {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.products-page h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center; /* Center the product */
+    align-items: center;
+    height: auto;
+}
+
+.product-box {
+    width: 300px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-box img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.product-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.product-box p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.buy-now {
+    background-color: #008C76;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buy-now:hover {
+    background-color: #006f52;
+}
+/* Only apply to images on the product page */
+body.product-page .product-image {
+    width: 1000px;  /* Adjust this value as needed */
+    height: auto;  /* Maintain aspect ratio */
+    margin-bottom: 20px;
+}
+
+/* Dropdown */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Center content for Overview and Contact Us pages */
+.center-content {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Optional: You can also make the text size a bit bigger */
+.center-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
