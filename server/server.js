@@ -5,9 +5,10 @@ const cors = require('cors');
 const path = require('path');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); // Use env variable
 
-
 const app = express();
-const port = 3000;
+
+// Use the port that Render assigns or default to 3000 for local development
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -65,7 +66,7 @@ app.post('/create-checkout-session', async (req, res) => {
     }
 });
 
-// Start the server
-app.listen(port, () => {
+// Start the server and bind it to the appropriate network interface and port
+app.listen(port, '0.0.0.0', () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
