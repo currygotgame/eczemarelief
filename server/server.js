@@ -13,25 +13,20 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+// Serve static files from the root directory (index.html is in root)
+app.use(express.static(path.join(__dirname, '../')));
+
+// Route to serve the index.html
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../index.html'));
+});
+
 // Serve Stripe public key from the server
 app.get('/get-stripe-public-key', (req, res) => {
     res.json({ publicKey: process.env.STRIPE_PUBLIC_KEY });
 });
 
-// Serve static files from the 'brand' folder (move up one level from 'server' folder)
-app.use(express.static(__dirname));
-
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../brand/index.html'));
-});
-
-
-app.get('/test', (req, res) => {
-    res.send('Server is working!');
-});
-
-// Serve success and cancel pages
+// Serve success and cancel pages from the 'brand' folder
 app.get('/success.html', (req, res) => {
     console.log('Success page requested');
     res.sendFile(path.join(__dirname, '../brand/success.html'));
