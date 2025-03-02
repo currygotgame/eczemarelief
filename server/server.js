@@ -19,7 +19,7 @@ app.get('/get-stripe-public-key', (req, res) => {
 });
 
 // Serve static files from the 'brand' folder (move up one level from 'server' folder)
-app.use(express.static(path.join(__dirname, '../brand')));
+app.use(express.static(path.join(__dirname, 'brand')));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../brand/index.html'));
