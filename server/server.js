@@ -1,12 +1,13 @@
+const path = require('path'); // Require path before using it
 require('dotenv').config({ path: path.join(__dirname, '.env') }); // Load .env from the server folder
-
-
 
 const express = require('express');
 const cors = require('cors');
-const path = require('path');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); // Use env variable
+
 console.log('Loaded Stripe Public Key:', process.env.STRIPE_PUBLIC_KEY); // Debugging log
+
+
 const app = express();
 
 // Use the port that Render assigns or default to 3000 for local development
