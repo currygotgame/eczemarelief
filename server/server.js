@@ -25,10 +25,11 @@ app.get('/', (req, res) => {
 });
 
 // Serve Stripe public key from the server
+// Serve Stripe public key from the server
 app.get('/get-stripe-public-key', (req, res) => {
+    console.log('Debugging, remove before pushing', process.env.STRIPE_PUBLIC_KEY);
     res.json({ publicKey: process.env.STRIPE_PUBLIC_KEY });
 });
-
 // Serve success and cancel pages from the 'brand' folder
 app.get('/success.html', (req, res) => {
     console.log('Success page requested');
