@@ -1,5 +1,8 @@
+// Replace 'http://localhost:3000' with your Render URL
+const renderUrl = 'https://eczemarelief.onrender.com'; // Update this with your actual Render URL
+
 // Fetch the Stripe public key from the server
-fetch('http://localhost:3000/get-stripe-public-key')
+fetch(`${renderUrl}/get-stripe-public-key`)
     .then(response => response.json())
     .then(data => {
         // Initialize Stripe with the public key from the server
@@ -12,7 +15,7 @@ fetch('http://localhost:3000/get-stripe-public-key')
 
             try {
                 // Call the backend to create a checkout session
-                const response = await fetch('http://localhost:3000/create-checkout-session', {
+                const response = await fetch(`${renderUrl}/create-checkout-session`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
