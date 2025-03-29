@@ -11,7 +11,8 @@ console.log('Loaded Stripe Public Key:', process.env.STRIPE_PUBLIC_KEY); // Debu
 const app = express();
 
 // Use the port that Render assigns or default to 3000 for local development
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 10000;
+
 
 app.use(cors());
 app.use(express.json());
