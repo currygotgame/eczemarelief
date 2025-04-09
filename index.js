@@ -1,5 +1,5 @@
 // Replace 'http://localhost:3000' with your Render URL
-const renderUrl = 'https://eczemarelief.onrender.com'; // Update this with your actual Render URL
+const renderUrl = 'https://eczemafree.onrender.com'; // Update this with your actual Render URL
 
 // Fetch the Stripe public key from the server
 fetch(`${renderUrl}/get-stripe-public-key`)
