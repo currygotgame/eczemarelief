@@ -25,7 +25,7 @@ fetch(`${renderUrl}/get-stripe-public-key`)
                             {
                                 name: 'Eczema Relief Lotion',
                                 quantity: 1,
-                                price: 1999, // Price in cents (example: $19.99)
+                                price: 2499, // Price in cents (example: $19.99)
                                 currency: 'usd',
                             },
                         ],
